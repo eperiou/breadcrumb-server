@@ -1,11 +1,10 @@
 FROM node
 
 RUN npm install -g --silent nodal
-RUN nodal new
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY package.json /user/src/app
+COPY package.json /user/src/app/
 RUN npm install
 COPY . /usr/src/app
 

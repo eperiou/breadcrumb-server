@@ -1,5 +1,4 @@
 .env
-.nodal
 .npmignore
 .eslintrc.js
 node_modules
