@@ -1,0 +1,4 @@
+.env
+.nodal
+.npmignore
+node_modules
