@@ -1,38 +1,8 @@
 {
 
-  "migration_id": 2017031501022225,
+  "migration_id": 2017031419343772,
 
   "models": {
-
-    "Crumb": {
-
-      "table": "crumbs",
-
-      "columns": [
-        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
-        {"name": "crumbtrail_id", "type": "int", "properties": {}},
-        {"name": "name", "type": "string", "properties": {}},
-        {"name": "description", "type": "string", "properties": {}},
-        {"name": "order_Number", "type": "int", "properties": {}},
-        {"name": "geoId", "type": "string", "properties": {}},
-        {"name": "latitude", "type": "int", "properties": {}},
-        {"name": "longitude", "type": "int", "properties": {}},
-        {"name": "radius", "type": "int", "properties": {}},
-        {"name": "notification_id", "type": "int", "properties": {}},
-        {"name": "title", "type": "string", "properties": {}},
-        {"name": "small_icon", "type": "string", "properties": {}},
-        {"name": "open_app_on_click", "type": "boolean", "properties": {}},
-        {"name": "vibration", "type": "int", "properties": {}},
-        {"name": "data", "type": "string", "properties": {}},
-        {"name": "text", "type": "text", "properties": {}},
-        {"name": "image", "type": "string", "properties": {}},
-        {"name": "video", "type": "string", "properties": {}},
-        {"name": "aR", "type": "string", "properties": {}},
-        {"name": "created_at", "type": "datetime", "properties": {}},
-        {"name": "updated_at", "type": "datetime", "properties": {}}
-      ]
-
-    },
 
     "Crumbtrail": {
 
@@ -49,23 +19,6 @@
         {"name": "requires_money", "type": "string", "properties": {}},
         {"name": "start_Crumb", "type": "int", "properties": {}},
         {"name": "end_Crumb", "type": "int", "properties": {}},
-        {"name": "created_at", "type": "datetime", "properties": {}},
-        {"name": "updated_at", "type": "datetime", "properties": {}}
-      ]
-
-    },
-
-    "Savedtrail": {
-
-      "table": "savedtrails",
-
-      "columns": [
-        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
-        {"name": "user_id", "type": "int", "properties": {}},
-        {"name": "crumbtrail_id", "type": "int", "properties": {}},
-        {"name": "position", "type": "int", "properties": {}},
-        {"name": "time_start", "type": "int", "properties": {}},
-        {"name": "time_finished", "type": "int", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
         {"name": "updated_at", "type": "datetime", "properties": {}}
       ]
