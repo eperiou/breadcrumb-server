@@ -33,6 +33,38 @@ class IndexControllerTest extends Nodal.mocha.Test {
         done();
       });
     });
+    it('Should return Post new crumbtrail', (done) => {
+      rp({ uri: 'http://localhost:3000/crumbtrails',
+        method: 'POST',
+        body: {
+          name: 'newly added trail',
+          description: 'text for test trail 2',
+          rating: 4,
+          type: 'adventure',
+          length: '26.3 miles',
+          requires_money: 'no',
+          start_Crumb: 2,
+          end_Crumb: 7,
+        },
+        json: true,
+      }).then((createdtrail) => {
+        expect(createdtrail.data[0].name).to.equal('newly added trail');
+        done();
+      });
+    });
+
+// TODO: write new test because this one works but only once!
+    // it('Should delete added crumbtrail', (done) => {
+    //   rp({ uri: 'http://localhost:3000/crumbtrails/4',
+    //     method: 'DELETE',
+    //   }).then(() => {
+    //     rp({ uri: 'http://localhost:3000/crumbtrails',
+    //       method: 'GET' }).then((response) => {
+    //         console.log(response,'respomse');
+    //       }).catch((err)=> console.log(err));
+    //     done();
+    //   });
+    // });
   }
 }
 

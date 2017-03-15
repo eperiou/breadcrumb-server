@@ -53,7 +53,7 @@ class CrumbtrailsController extends Nodal.Controller {
 
   create() {
     Crumbtrail.create(this.params.body, (err, model) => {
-      this.respond(err || model);
+      this.respond(err || model, ['id', 'name']);
     });
   }
   update() {
