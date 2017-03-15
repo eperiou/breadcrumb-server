@@ -17,7 +17,7 @@ class IndexControllerTest extends Nodal.mocha.Test {
     });
     it('Should return emails of users from data', (done) => {
       rp('http://localhost:3000/users').then((users) => {
-        expect(JSON.parse(users).data[0].email).to.equal('test1@email.com');
+        expect(JSON.parse(users).data[0].username).to.equal('testuser1');
         done();
       });
     });

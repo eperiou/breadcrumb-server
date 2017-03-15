@@ -40,7 +40,7 @@
 
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
-        {"name": "creator", "type": "int", "properties": {}},
+        {"name": "user_id", "type": "int", "properties": {}},
         {"name": "name", "type": "string", "properties": {}},
         {"name": "description", "type": "text", "properties": {}},
         {"name": "rating", "type": "int", "properties": {}},

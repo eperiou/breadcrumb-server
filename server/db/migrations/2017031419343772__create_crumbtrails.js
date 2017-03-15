@@ -12,7 +12,7 @@ class CreateCrumbtrails extends Nodal.Migration {
   up() {
     return [
       this.createTable('crumbtrails', [
-        { name: 'creator', type: 'int' },
+        { name: 'user_id', type: 'int' },
         { name: 'name', type: 'string' },
         { name: 'description', type: 'text' },
         { name: 'rating', type: 'int' },

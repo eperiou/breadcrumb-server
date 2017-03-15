@@ -9,8 +9,16 @@ class UsersController extends Nodal.Controller {
   index() {
     User.query()
       .where(this.params.query)
+      .join('crumbtrail')
       .end((err, models) => {
-        this.respond(err || models);
+        this.respond(err || models, [
+          'username',
+          'points',
+          'total_completed',
+          'current_trail',
+          'profile_picture',
+          { crumbtrail: ['id'] },
+        ]);
       });
   }
 
