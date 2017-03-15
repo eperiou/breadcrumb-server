@@ -97,6 +97,22 @@
          "video": "string",
          "aR": "string"
        }
+     ],
+     "Savedtrail": [
+       {
+         "user_id": 1,
+         "crumbtrail_id": 2,
+         "position": 3,
+         "time_start": 1420,
+         "time_finished": 1500
+       },
+       {
+         "user_id": 2,
+         "crumbtrail_id": 2,
+         "position": 1,
+         "time_start": 1200,
+         "time_finished": 1300
+       }
      ]
   },
 

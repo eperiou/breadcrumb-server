@@ -10,6 +10,7 @@ class UsersController extends Nodal.Controller {
     User.query()
       .where(this.params.query)
       .join('crumbtrail')
+      .join('savedtrail')
       .end((err, models) => {
         this.respond(err || models, [
           'username',
@@ -18,6 +19,7 @@ class UsersController extends Nodal.Controller {
           'current_trail',
           'profile_picture',
           { crumbtrail: ['id'] },
+          { savedtrail: ['id'] },
         ]);
       });
   }
