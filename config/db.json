@@ -6,7 +6,7 @@
       "port": "5432",
       "user": "postgres",
       "password": "",
-      "database": "server_development"
+      "database": "breadcrumbserver_development"
     }
   },
   "test": {
@@ -16,7 +16,7 @@
       "port": "5432",
       "user": "postgres",
       "password": "",
-      "database": "server_test"
+      "database": "breadcrumbserver_test"
     }
   },
   "production": {

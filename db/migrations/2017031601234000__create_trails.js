@@ -1,17 +1,17 @@
-'use strict';
+// 'use strict';
 
 const Nodal = require('nodal');
 
-class CreateCrumbtrails extends Nodal.Migration {
+class CreateTrails extends Nodal.Migration {
 
   constructor(db) {
     super(db);
-    this.id = 2017031419343772;
+    this.id = 2017031601234000;
   }
 
   up() {
     return [
-      this.createTable('crumbtrails', [
+      this.createTable('trails', [
         { name: 'user_id', type: 'int' },
         { name: 'name', type: 'string' },
         { name: 'description', type: 'text' },
@@ -19,18 +19,15 @@ class CreateCrumbtrails extends Nodal.Migration {
         { name: 'type', type: 'string' },
         { name: 'length', type: 'string' },
         { name: 'requires_money', type: 'string' },
-        { name: 'start_Crumb', type: 'int' },
-        { name: 'end_Crumb', type: 'int' },
-      ]),
+        { name: 'start_crumb', type: 'int' },
+        { name: 'end_crumb', type: 'int' }]),
     ];
   }
-
   down() {
     return [
-      this.dropTable('crumbtrails'),
+      this.dropTable('trails'),
     ];
   }
-
 }
 
-module.exports = CreateCrumbtrails;
+module.exports = CreateTrails;

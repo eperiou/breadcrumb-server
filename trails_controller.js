@@ -2,18 +2,18 @@
 
 const Nodal = require('nodal');
 
-const Crumbtrail = Nodal.require('app/models/crumbtrail.js');
+const Trail = Nodal.require('app/models/trail.js');
 
-class CrumbtrailsController extends Nodal.Controller {
+class TrailsController extends Nodal.Controller {
 
   index() {
-    Crumbtrail.query()
+    Trail.query()
       .where(this.params.query)
       .join('crumb')
       .end((err, models) => {
         this.respond(err || models, [
           'id',
-          'creator',
+          'user_id',
           'name',
           'description',
           'rating',
@@ -24,7 +24,7 @@ class CrumbtrailsController extends Nodal.Controller {
           'end_Crumb',
           'created_at',
           'updated_at',
-          { crumb: ['crumbtrail_id',
+          { crumb: ['trail_id',
             'name',
             'description',
             'order_Number',
@@ -46,27 +46,25 @@ class CrumbtrailsController extends Nodal.Controller {
       });
   }
   show() {
-    Crumbtrail.find(this.params.route.id, (err, model) => {
+    Trail.find(this.params.route.id, (err, model) => {
       this.respond(err || model);
     });
   }
-
   create() {
-    Crumbtrail.create(this.params.body, (err, model) => {
-      this.respond(err || model, ['id', 'name']);
+    Trail.create(this.params.body, (err, model) => {
+      this.respond(err || model);
     });
   }
   update() {
-    Crumbtrail.update(this.params.route.id, this.params.body, (err, model) => {
+    Trail.update(this.params.route.id, this.params.body, (err, model) => {
       this.respond(err || model);
     });
   }
   destroy() {
-    Crumbtrail.destroy(this.params.route.id, (err, model) => {
+    Trail.destroy(this.params.route.id, (err, model) => {
       this.respond(err || model);
     });
   }
-
 }
 
-module.exports = CrumbtrailsController;
+module.exports = TrailsController;

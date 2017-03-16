@@ -6,17 +6,17 @@ class CreateCrumbs extends Nodal.Migration {
 
   constructor(db) {
     super(db);
-    this.id = 2017031420314577;
+    this.id = 2017031601340943;
   }
 
   up() {
     return [
       this.createTable('crumbs', [
-        { name: 'crumbtrail_id', type: 'int' },
+        { name: 'trail_id', type: 'int' },
         { name: 'name', type: 'string' },
-        { name: 'description', type: 'string' },
-        { name: 'order_Number', type: 'int' },
-        { name: 'geoId', type: 'string' },
+        { name: 'description', type: 'text' },
+        { name: 'order_number', type: 'int' },
+        { name: 'geo_id', type: 'string' },
         { name: 'latitude', type: 'int' },
         { name: 'longitude', type: 'int' },
         { name: 'radius', type: 'int' },
@@ -27,13 +27,11 @@ class CreateCrumbs extends Nodal.Migration {
         { name: 'vibration', type: 'int' },
         { name: 'data', type: 'string' },
         { name: 'text', type: 'text' },
-        { name: 'image', type: 'string' },
+        { name: 'imgage', type: 'string' },
         { name: 'video', type: 'string' },
-        { name: 'aR', type: 'string' },
-      ]),
+        { name: 'a_r', type: 'string' }]),
     ];
   }
-
   down() {
     return [
       this.dropTable('crumbs'),

@@ -1,31 +1,27 @@
 {
-  "name": "server",
+  "name": "breadcrumbserver",
   "version": "0.0.0",
-  "description": "server",
-  "author": "Breadcrumb",
+  "description": "breadcrumbserver",
+  "author": "breadcrumb",
   "main": "cluster.js",
   "engines": {
     "node": "6.0.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "chai": "~3.5.0",
-    "mocha": "~2.4.5",
-    "nodal": "0.13.2",
-    "request": "^2.81.0",
-    "request-promise": "^4.1.1"
+    "nodal": "0.13.2"
   },
   "devDependencies": {
+    "chai": "~3.5.0",
     "eslint": "^3.17.1",
     "eslint-config-airbnb-base": "^11.1.1",
     "eslint-plugin-import": "^2.2.0",
-    "nodal": "0.13.2"
+    "mocha": "~2.4.5"
   },
   "scripts": {
     "test": "mocha ./test/runner.js",
     "start": "node cluster.js",
-    "worker": "node worker.js",
-    "startdb": "postgres -D /usr/local/var/postgres"
+    "worker": "node worker.js"
   },
   "private": true
 }
